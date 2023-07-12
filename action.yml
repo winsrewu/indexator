@@ -1,4 +1,5 @@
-name: 'Index all files to single JSON-file'
+name: 'Index files'
+description: 'Index all files to single JSON-file'
 runs:
   using: "composite"
   steps:
