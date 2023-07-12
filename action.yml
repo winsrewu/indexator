@@ -1,0 +1,10 @@
+name: 'Index all files to single JSON-file'
+runs:
+  using: "composite"
+  steps:
+    - name: Generate File Index
+      run: |
+          find . -type f -not -path "./.git/*" -exec echo {} \; > file_list.txt
+          cat file_list.txt | jq -R . | jq -s . > file_index.json
+   - name: Commit file
+     uses: stefanzweifel/git-auto-commit-action@v4
