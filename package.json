@@ -1,0 +1,8 @@
+{
+    "name": "indexator",
+    "version": "0.1.0",
+    "description": "Generates a html file index of all files in the repository (apart from .git folder)",
+    "main": "index.js",
+    "dependencies": {},
+    "type":"module"
+  }
