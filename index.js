@@ -6,12 +6,13 @@ function generateFileIndex(basePath) {
 
     function walk(dir, currentIndex) {
         const files = readdirSync(dir);
-        files.forEach((file, index) => {
+        files.forEach((file) => {
             const fullPath = join(dir, file);
             if (fullPath.startsWith(".git")) return; // Ignore .git directory
             if (statSync(fullPath).isDirectory()) {
-                currentIndex.push({ dir: file, files: [] })
-                walk(fullPath, currentIndex[index].files);
+                const subDir = { dir: file, files: [] };
+                currentIndex.push(subDir)
+                walk(fullPath, subDir.files);
             } else {
                 currentIndex.push(file)
             }
