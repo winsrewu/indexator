@@ -2,6 +2,9 @@
 Index all files from repo to a single html file.
 
 ## Usage
+![example html file](example.png)  
+You can click the blue links to download the files.
+
 ```yml
 ## .github/workflows/gh-pages.yml
 
