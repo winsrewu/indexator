@@ -1,4 +1,4 @@
-name: Index files
+name: Repository Indexator
 description: Index all files from repo to a html file
 author: Maxim Prygunov & WinsreWu
 branding:
